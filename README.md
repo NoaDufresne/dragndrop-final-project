@@ -16,3 +16,5 @@ Je suis étudiante en Web Design à l'ICAN :)
 ## Authors
 
 - [@NoaDufresne](https://github.com/NoaDufresne)
+
+![Alt text](./images/landing-page.png)
