@@ -7,24 +7,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="s1">
-        <div class="window draggable" id="draggableWindow">
-            <div class="header">
-                <span class="title">Window Title</span>
-                <span class="icon" id="toggleButton">−</span>
-            </div>
-            <div class="content" id="contentArea">
-                <div class="image-container">
-                    <img src="./images/beach.jpeg" alt="Example Image" class="photo">
-                </div>
-                <p>This is the content of the draggable window.</p>
-            </div>
+    <section id="cover-page">
+        <div class="cover-content">
+            <h1>Welcome to My Website</h1>
         </div>
     </section>
+    <div class="main-content">
+        <section id="s1" class="left-column">
+            <div class="folder draggable">
+                <img src="./images/folder-bleu.png" alt="">
+                <span class="folder-text">Folder Name</span>
+            </div>
+            <div class="folder draggable">
+                <img src="./images/folder-bleu.png" alt="">
+                <span class="folder-text">Folder Name</span>
+            </div>
+            <div class="folder draggable">
+                <img src="./images/folder-bleu.png" alt="">
+                <span class="folder-text">Folder Name</span>
+            </div>
+            <div class="folder draggable">
+                <img src="./images/folder-bleu.png" alt="">
+                <span class="folder-text">Folder Name</span>
+            </div>
+            <div class="window draggable" id="draggableWindow">
+                <div class="header">
+                    <span class="title">Window Title</span>
+                    <span class="icon" id="toggleButton">−</span>
+                </div>
+                <div class="content" id="contentArea">
+                    <div class="image-container">
+                        <img src="./images/beach.jpeg" alt="Example Image" class="photo">
+                    </div>
+                    <p>This is the content of the draggable window :)</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="s2">
-
-    </section>
+        <section id="s2" class="right-column">
+            <p>This is the smaller right column.</p>
+            <div class="theme-buttons">
+                <button class="theme-button light"></button>
+                <button class="theme-button dark"></button>
+                <button class="theme-button pink"></button>
+                <button class="theme-button green"></button>
+            </div>
+        </section>
+    </div>
 
     <script src="https://unpkg.com/draggabilly@3/dist/draggabilly.pkgd.min.js"></script>
     <script src="script.js"></script>

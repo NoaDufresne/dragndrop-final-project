@@ -1,13 +1,11 @@
-// Initialize Draggabilly
 var draggableElems = document.querySelectorAll('.draggable');
 var draggies = [];
 for (var i = 0; i < draggableElems.length; i++) {
     var draggableElem = draggableElems[i];
-    var draggie = new Draggabilly(draggableElem, {});
+    var draggie = new Draggabilly(draggableElem, {containment: '#s1'});
     draggies.push(draggie);
 }
 
-// Toggle minimize/maximize functionality
 const toggleButton = document.getElementById('toggleButton');
 const contentArea = document.getElementById('contentArea');
 const draggableWindow = document.getElementById('draggableWindow');
@@ -17,15 +15,57 @@ toggleButton.addEventListener('click', function () {
 
     if (contentArea.style.display === 'none') {
         contentArea.style.display = 'block';
-        toggleButton.textContent = '−'; // Change to minimize icon
-        draggableWindow.style.height = 'auto'; // Reset height
-        draggableWindow.style.top = '100px'; // Move back to original top
+        toggleButton.textContent = '−'; 
+        draggableWindow.style.height = 'auto'; 
+        draggableWindow.style.top = '100px'; 
     } else {
-        draggableWindow.style.height = `${headerHeight}px`; // Reduce to header height
+        draggableWindow.style.height = `${headerHeight}px`; 
         draggableWindow.style.top = `${parseInt(draggableWindow.style.top || 100) - (draggableWindow.offsetHeight - headerHeight)}px`; // Move up
-        toggleButton.textContent = '+'; // Change to maximize icon
+        toggleButton.textContent = '+'; 
         setTimeout(() => {
-            contentArea.style.display = 'none'; // Hide content after transition
-        }, 300); // Match the CSS transition duration
+            contentArea.style.display = 'none'; 
+        }, 300);
     }
+});
+
+const darkButton = document.querySelector('.theme-button.dark');
+const body = document.body;
+
+darkButton.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+});
+
+
+let lastScrollY = 0; // Track the last scroll position
+
+document.addEventListener('scroll', () => {
+    const coverPage = document.getElementById('cover-page');
+    const mainContent = document.querySelector('.main-content');
+    const currentScrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+
+    // Calculate the scroll percentage
+    const scrollPercent = currentScrollY / (documentHeight - windowHeight);
+
+    // Scroll Down: Fade out the cover page gradually based on scroll position
+    coverPage.style.transition = 'opacity 0.5s ease'; // Smooth transition for opacity
+    coverPage.style.opacity = 1 - scrollPercent; // Fade out based on the scroll percentage
+
+    // If the user has scrolled past the cover, make it fully hidden
+    if (currentScrollY > 150) {
+        coverPage.style.pointerEvents = 'none'; // Prevent interactions when hidden
+        mainContent.style.transition = 'opacity 1s ease, transform 1s ease';
+        mainContent.style.opacity = '1';
+        mainContent.style.transform = 'translateY(0)';
+    } else {
+        // Scroll Up: Fade in the cover page smoothly
+        coverPage.style.pointerEvents = 'all'; // Reactivate interactions
+        mainContent.style.transition = 'opacity 1s ease, transform 1s ease';
+        mainContent.style.opacity = '0';
+        mainContent.style.transform = 'translateY(50px)';
+    }
+
+    // Update last scroll position
+    lastScrollY = currentScrollY;
 });
