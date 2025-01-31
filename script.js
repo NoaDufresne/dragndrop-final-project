@@ -95,26 +95,5 @@ document.addEventListener('scroll', () => {
     lastScrollY = currentScrollY;
 });
 
-const folders = document.querySelectorAll('.folder'); 
-const modal = document.getElementById('popupModal');
-const closeButton = modal.querySelector('.close');
 
-folders.forEach(folder => {
-    folder.addEventListener('click', () => {
-        modal.classList.remove('hidden');
-        modal.style.display = 'flex';  
-    });
-});
-
-closeButton.addEventListener('click', () => {
-    modal.classList.add('hidden');
-    modal.style.display = 'none';  
-});
-
-window.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        modal.classList.add('hidden');
-        modal.style.display = 'none';  
-    }
-});
 
