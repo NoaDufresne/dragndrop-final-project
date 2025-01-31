@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Drag n' Drop Final Project</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/vvx6kfv.css">
 </head>
 <body>
     <section id="cover-page">
         <div class="cover-content">
             <h1>Portfolio</h1>
             <section class="sub">
-                <div><a href="#contact">Contact</a></div>
+                <div><a href="contact.html">Contact</a></div>
                 <div><a href="#about">About</a></div>
             </section>
         </div>
@@ -20,45 +21,99 @@
         <section id="s1" class="left-column">
             <div class="folder draggable">
                 <img src="./images/folder-bleu.png" alt="">
-                <span class="folder-text">Folder Name</span>
+                <span class="folder-text">2020</span>
+            </div>
+            <div class="modal hidden" id="popupModal">
+                    <span class="close" style="position: absolute; top: 10px; right: 10px; font-size: 30px; cursor: pointer;">&times;</span>
+                    <div class="gallery">
+                        <img src="./images/beach.jpeg" alt="Image 1" class="gallery-image">
+                        <img src="./images/desert.png" alt="Image 2" class="gallery-image">
+                        <img src="./images/img3.png" alt="Image 3" class="gallery-image">
+                    </div>
             </div>
             <div class="folder draggable">
                 <img src="./images/folder-bleu.png" alt="">
-                <span class="folder-text">Folder Name</span>
+                <span class="folder-text">2021</span>
             </div>
             <div class="folder draggable">
                 <img src="./images/folder-bleu.png" alt="">
-                <span class="folder-text">Folder Name</span>
+                <span class="folder-text">2022</span>
             </div>
             <div class="folder draggable">
                 <img src="./images/folder-bleu.png" alt="">
-                <span class="folder-text">Folder Name</span>
+                <span class="folder-text">2023</span>
             </div>
             <div class="window draggable" id="draggableWindow">
                 <div class="header">
-                    <span class="title">Window Title</span>
+                    <span class="title">Beach</span>
                     <span class="icon" id="toggleButton">−</span>
                 </div>
                 <div class="content" id="contentArea">
                     <div class="image-container">
                         <img src="./images/beach.jpeg" alt="Example Image" class="photo">
                     </div>
-                    <p>This is the content of the draggable window :)</p>
+                    <p class="description">A quiet beach with small waves lapping at the shore.</p>
+                </div>
+            </div>
+            <div class="window draggable" id="draggableWindow2">
+                <div class="header">
+                    <span class="title">Desert</span>
+                    <span class="icon" id="toggleButton">−</span>
+                </div>
+                <div class="content" id="contentArea">
+                    <div class="image-container">
+                        <img src="./images/desert.png" alt="Example Image" class="photo">
+                    </div>
+                    <p class="description">A vast, empty desert with undisturbed sand.</p>
+                </div>
+            </div>
+            <div class="window draggable" id="draggableWindow3">
+                <div class="header">
+                    <span class="title">Rocks</span>
+                    <span class="icon" id="toggleButton">−</span>
+                </div>
+                <div class="content" id="contentArea">
+                    <div class="image-container">
+                        <img src="./images/img3.png" alt="Example Image" class="photo">
+                    </div>
+                    <p class="description">A beach with a shore made of large, smooth rocks.</p>
                 </div>
             </div>
         </section>
 
         <section id="s2" class="right-column">
-            <p>This is the smaller right column.</p>
             <div class="theme-buttons">
                 <button class="theme-button light"></button>
                 <button class="theme-button dark"></button>
                 <button class="theme-button pink"></button>
                 <button class="theme-button green"></button>
             </div>
+            <hr>
+            <div class="social-items">
+                <div class="social draggable">
+                    <img src="./images/linkedin.png" alt="">
+                    <span class="social-text">LinkedIn</span>
+                </div>
+                <div class="social draggable">
+                    <img src="./images/insta.png" alt="">
+                    <span class="social-text">Instagram</span>
+                </div>
+                <div class="social draggable">
+                    <img src="./images/x.png" alt="">
+                    <span class="social-text">X</span>
+                </div>
+            </div>
+            <div class="notes-container">
+                <div class="note draggable" id="note1">
+                    <div class="note-content">✔ Finish UI tweaks<br>✔ Test drag & drop<br>☐ Choose final font</div>
+                </div>
+                <div class="note draggable" id="note2">
+                    <div class="note-content">"Design is intelligence made visible." – Alina Wheeler</div>
+                </div>
+            </div>
         </section>
     </div>
-
+    
     <script src="https://unpkg.com/draggabilly@3/dist/draggabilly.pkgd.min.js"></script>
     <script src="script.js"></script>
 </body>
