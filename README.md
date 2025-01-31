@@ -2,11 +2,11 @@
 
 Dans le cadre du cours de Creative Coding à l’ICAN, ce projet consiste à expérimenter avec le glisser-déposer en utilisant la bibliothèque Dragabilly. L’idée est de créer des interactions fun et originales.
 
-## Rendu final: Qu'est ce qui a changé??
+## :seedling: Rendu final: Qu'est ce qui a changé??
 J'ai ajouté des images, des icones de réseaux sociaux, des post-its et terminé les 4 themes de l'interface: light, dark, pink et green !
 J'ai eu quelques difficultés a créer un modal lorsequ'on clique sur un folder... j'ai donc laissé tomber l'idée (pour le moment...par manque de temps). Il y a désormais une page contact !
 
-## My project
+## :sunrise_over_mountains: My project
 
 Ce projet est un portfolio fictif conçu pour un photographe souhaitant mettre en valeur ses créations, ses projets, et son univers visuel. L'idée était de marier une esthétique rétro, inspirée des interfaces de bureau vintage, avec une navigation moderne et intuitive. L'objectif principal est d'offrir une expérience utilisateur engageante et ludique, où les visiteurs peuvent explorer les œuvres du photographe en interagissant directement avec les éléments à l'écran.
 
