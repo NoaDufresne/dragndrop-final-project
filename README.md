@@ -1,4 +1,4 @@
-# dragndrop-S1
+# :dizzy: dragndrop-S1
 
 Dans le cadre du cours de Creative Coding à l’ICAN, ce projet consiste à expérimenter avec le glisser-déposer en utilisant la bibliothèque Dragabilly. L’idée est de créer des interactions fun et originales.
 
