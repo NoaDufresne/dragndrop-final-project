@@ -145,7 +145,7 @@ body.scrolled .main-content {
 
 #draggableWindow3 {
     top: 24%;
-    left: 27%;
+    left: 32%;
 }
 
 .header {
@@ -509,8 +509,8 @@ hr {
 
 .note {
     position: absolute;
-    width: 180px;
-    height: 180px;
+    width: 140px;
+    height: 140px;
     padding: 15px;
     font-family: "shantell-sans-variable", sans-serif;
     font-size: 16px;
@@ -549,5 +549,5 @@ hr {
     transform: rotate(-3deg);
     background: #ffd8fe;
     right: 4%;
-    bottom: 17%;
+    bottom: 12%;
 }
